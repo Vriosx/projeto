@@ -25,18 +25,19 @@ public class jogo {
                 System.out.println("TÁ QUENTE!");
             } else if (palpite > aleatorio) {
                 System.out.println("\nO valor sorteado é menor que " + palpite);
-            } else if (palpite < aleatorio){
+            } else if (palpite < aleatorio) {
                 System.out.println("\nO valor sorteado é maior que " + palpite);
             }
 
-        }while (tentativa < 5 && palpite != aleatorio);
+        } while (tentativa < 5 && palpite != aleatorio);
 
         if (palpite == aleatorio) {
             System.out.println("\nParabéns você ganhou!");
         } else System.out.println("\nGame Over!\nO valor correto era " + aleatorio);
         jogarNovamente();
     }
-    public static void jogarNovamente(){
+
+    public static void jogarNovamente() {
 
         Scanner scanner = new Scanner(System.in);
         int escolha;
@@ -46,13 +47,13 @@ public class jogo {
                 "\n             2 - Não\n" +
                 "----------------------------------------");
         escolha = scanner.nextInt();
-        if (escolha == 1){
+        if (escolha == 1) {
             jogoCompleto();
-        }else System.out.println("Obrigado, até a próxima");
+        } else System.out.println("Obrigado, até a próxima");
     }
 
-        public static void main (String[]args){
-            jogoCompleto();
-            jogarNovamente();
-        }
+    public static void main(String[] args) {
+        jogoCompleto();
+        jogarNovamente();
     }
+}
